@@ -256,7 +256,6 @@ function errorPosition(state, text) {
 // Circular dependencies.
 const lex = require('./lexer');
 const parse = require('./parser');
-const State = require('./state');
 
 // Grammar fragments.
 const grammarFragments = {
