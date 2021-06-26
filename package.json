@@ -1,6 +1,6 @@
 {
   "name": "dissector",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple lexer and parser library with a grammar language.",
   "main": "index.js",
   "keywords": ["lexer", "parser", "grammar", "syntax"],
