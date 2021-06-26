@@ -16,7 +16,7 @@ Returns a function that will apply the handler on a state. The handler is bound 
 ## Grammar
 * `group { ... }`  
 This defines a group in the grammar. All groups are lexers unless named `parser`. You need at least one group in a grammar, and at least one rule in a group. Typically, you should include one named `parser`, and one named `lexer`. The other ones are for the lexer, without being processed automatically.
-* `rule: content;`
+* `rule: content;`  
 This defines a rule in a group. The default group when referencing rules is the current one. If you are referencing a rule with the same name as one in the current group, you must specify the group followed by two colons before the rule name.
 * `(x y)` = Resets the precedence.
 * `'x'` = Converts to `text`.
