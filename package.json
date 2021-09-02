@@ -1,9 +1,17 @@
 {
-  "name": "dissector",
-  "version": "1.0.1",
-  "description": "A simple lexer and parser library with a grammar language.",
-  "main": "index.js",
-  "keywords": ["lexer", "parser", "grammar", "syntax"],
-  "author": "Rigidity",
-  "license": "MIT"
+    "name": "dissector",
+    "version": "2.0.0",
+    "description": "An easy to use parser combinator library.",
+    "main": "dist/index.js",
+    "keywords": [
+        "lexer",
+        "parser",
+        "grammar",
+        "combinator"
+    ],
+    "author": "Rigidity",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^16.7.10"
+    }
 }
