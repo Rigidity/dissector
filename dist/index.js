@@ -10,6 +10,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.identifierChar = exports.identifierStart = exports.hexDigits = exports.upperHexDigits = exports.lowerHexDigits = exports.decimalDigits = exports.octalDigits = exports.binaryDigits = exports.letters = exports.upperLetters = exports.lowerLetters = void 0;
 __exportStar(require("./rules/core/And"), exports);
 __exportStar(require("./rules/core/Beginning"), exports);
 __exportStar(require("./rules/core/Consume"), exports);
@@ -20,6 +21,7 @@ __exportStar(require("./rules/core/Modify"), exports);
 __exportStar(require("./rules/core/Or"), exports);
 __exportStar(require("./rules/core/Recursive"), exports);
 __exportStar(require("./rules/helper/Atleast"), exports);
+__exportStar(require("./rules/helper/Keyword"), exports);
 __exportStar(require("./rules/helper/List"), exports);
 __exportStar(require("./rules/helper/Not"), exports);
 __exportStar(require("./rules/helper/One"), exports);
@@ -41,4 +43,15 @@ __exportStar(require("./types/Match"), exports);
 __exportStar(require("./types/Position"), exports);
 __exportStar(require("./types/Rule"), exports);
 __exportStar(require("./types/State"), exports);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQUEsbURBQWlDO0FBQ2pDLHlEQUF1QztBQUN2Qyx1REFBcUM7QUFDckMsbURBQWlDO0FBQ2pDLHVEQUFxQztBQUNyQyx5REFBdUM7QUFDdkMsc0RBQW9DO0FBQ3BDLGtEQUFnQztBQUNoQyx5REFBdUM7QUFDdkMseURBQXVDO0FBQ3ZDLHNEQUFvQztBQUNwQyxxREFBbUM7QUFDbkMscURBQW1DO0FBQ25DLDBEQUF3QztBQUN4QyxzREFBb0M7QUFDcEMsdURBQXFDO0FBQ3JDLHdEQUFzQztBQUN0QyxzREFBb0M7QUFDcEMsdURBQXFDO0FBQ3JDLHdEQUFzQztBQUN0QyxxREFBbUM7QUFDbkMsb0RBQWtDO0FBQ2xDLHVEQUFxQztBQUNyQyxrREFBZ0M7QUFDaEMsc0RBQW9DO0FBQ3BDLGtEQUFnQztBQUNoQyxtREFBaUM7QUFDakMsZ0RBQThCO0FBQzlCLG1EQUFpQztBQUNqQywrQ0FBNkI7QUFDN0IsZ0RBQThCIn0=
+exports.lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
+exports.upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+exports.letters = exports.lowerLetters + exports.upperLetters;
+exports.binaryDigits = '01';
+exports.octalDigits = '01234567';
+exports.decimalDigits = '0123456789';
+exports.lowerHexDigits = exports.decimalDigits + 'abcdef';
+exports.upperHexDigits = exports.decimalDigits + 'ABCDEF';
+exports.hexDigits = exports.decimalDigits + 'abcdefABCDEF';
+exports.identifierStart = exports.letters + '_';
+exports.identifierChar = exports.identifierStart + exports.decimalDigits;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7OztBQUFBLG1EQUFpQztBQUNqQyx5REFBdUM7QUFDdkMsdURBQXFDO0FBQ3JDLG1EQUFpQztBQUNqQyx1REFBcUM7QUFDckMseURBQXVDO0FBQ3ZDLHNEQUFvQztBQUNwQyxrREFBZ0M7QUFDaEMseURBQXVDO0FBQ3ZDLHlEQUF1QztBQUN2Qyx5REFBdUM7QUFDdkMsc0RBQW9DO0FBQ3BDLHFEQUFtQztBQUNuQyxxREFBbUM7QUFDbkMsMERBQXdDO0FBQ3hDLHNEQUFvQztBQUNwQyx1REFBcUM7QUFDckMsd0RBQXNDO0FBQ3RDLHNEQUFvQztBQUNwQyx1REFBcUM7QUFDckMsd0RBQXNDO0FBQ3RDLHFEQUFtQztBQUNuQyxvREFBa0M7QUFDbEMsdURBQXFDO0FBQ3JDLGtEQUFnQztBQUNoQyxzREFBb0M7QUFDcEMsa0RBQWdDO0FBQ2hDLG1EQUFpQztBQUNqQyxnREFBOEI7QUFDOUIsbURBQWlDO0FBQ2pDLCtDQUE2QjtBQUM3QixnREFBOEI7QUFFakIsUUFBQSxZQUFZLEdBQUcsNEJBQTRCLENBQUM7QUFDNUMsUUFBQSxZQUFZLEdBQUcsNEJBQTRCLENBQUM7QUFDNUMsUUFBQSxPQUFPLEdBQUcsb0JBQVksR0FBRyxvQkFBWSxDQUFDO0FBQ3RDLFFBQUEsWUFBWSxHQUFHLElBQUksQ0FBQztBQUNwQixRQUFBLFdBQVcsR0FBRyxVQUFVLENBQUM7QUFDekIsUUFBQSxhQUFhLEdBQUcsWUFBWSxDQUFDO0FBQzdCLFFBQUEsY0FBYyxHQUFHLHFCQUFhLEdBQUcsUUFBUSxDQUFDO0FBQzFDLFFBQUEsY0FBYyxHQUFHLHFCQUFhLEdBQUcsUUFBUSxDQUFDO0FBQzFDLFFBQUEsU0FBUyxHQUFHLHFCQUFhLEdBQUcsY0FBYyxDQUFDO0FBQzNDLFFBQUEsZUFBZSxHQUFHLGVBQU8sR0FBRyxHQUFHLENBQUM7QUFDaEMsUUFBQSxjQUFjLEdBQUcsdUJBQWUsR0FBRyxxQkFBYSxDQUFDIn0=

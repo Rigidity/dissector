@@ -6,3 +6,4 @@ export interface MatchInfo {
 export declare type Matches = Interval & Match[];
 export declare type NamedMatch = MatchInfo & Interval & Match[];
 export declare type Match = NamedMatch | Matches | string;
+export declare function dumpMatch(source: string, match: Match, indent?: number): string;

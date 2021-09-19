@@ -4,3 +4,4 @@ export interface FailureInfo {
     info?: any;
 }
 export declare type Failure = FailureInfo & Interval;
+export declare function dumpFailure(source: string, failure: Failure): string;
