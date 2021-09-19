@@ -1,3 +1,4 @@
+export * from './characters';
 export * from './rules/core/And';
 export * from './rules/core/Beginning';
 export * from './rules/core/Consume';
@@ -30,15 +31,3 @@ export * from './types/Match';
 export * from './types/Position';
 export * from './types/Rule';
 export * from './types/State';
-
-export const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
-export const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-export const letters = lowerLetters + upperLetters;
-export const binaryDigits = '01';
-export const octalDigits = '01234567';
-export const decimalDigits = '0123456789';
-export const lowerHexDigits = decimalDigits + 'abcdef';
-export const upperHexDigits = decimalDigits + 'ABCDEF';
-export const hexDigits = decimalDigits + 'abcdefABCDEF';
-export const identifierStart = letters + '_';
-export const identifierChar = identifierStart + decimalDigits;

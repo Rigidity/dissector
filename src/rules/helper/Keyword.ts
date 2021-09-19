@@ -1,7 +1,9 @@
-import { Combine, identifierChar, Lookahead } from '../..';
+import { identifierChar } from '../../characters';
 import { DescriptionCache } from '../../types/Description';
 import { Rule } from '../../types/Rule';
 import { Literal } from '../core/Literal';
+import { Lookahead } from '../core/Lookahead';
+import { Combine } from '../meta/Combine';
 import { Pick } from './Pick';
 
 export class Keyword extends Combine {
