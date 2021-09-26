@@ -1,6 +1,7 @@
 export * from './characters';
 export * from './rules/core/And';
 export * from './rules/core/Beginning';
+export * from './rules/core/Between';
 export * from './rules/core/Consume';
 export * from './rules/core/End';
 export * from './rules/core/Literal';
