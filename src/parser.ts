@@ -195,7 +195,7 @@ export function textOf(...rules: Rule[]): Rule {
 }
 
 export function glueTogether(...rules: Rule[]): Rule {
-    const rule = and(...rules);
+    const rule = and(null, ...rules);
     return (state: State): Result => {
         const branch = state.branch();
         branch.skipped = [];
