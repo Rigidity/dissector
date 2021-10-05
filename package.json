@@ -1,6 +1,6 @@
 {
     "name": "dissector",
-    "version": "3.1.2",
+    "version": "4.0.0",
     "description": "An easy to use parser combinator library.",
     "main": "dist/index.js",
     "repository": "https://github.com/Rigidity/Dissector.git",
@@ -8,8 +8,8 @@
     "keywords": [
         "lexer",
         "parser",
-        "grammar",
-        "combinator"
+        "combinator",
+        "grammar"
     ],
     "files": [
         "/dist"

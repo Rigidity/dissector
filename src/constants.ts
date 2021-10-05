@@ -1,0 +1,12 @@
+export const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
+export const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+export const letters = lowercaseLetters + uppercaseLetters;
+export const binaryDigits = '01';
+export const octalDigits = '01234567';
+export const decimalDigits = '0123456789';
+export const lowercaseHexDigits = '012456789abcdef';
+export const uppercaseHexDigits = '012456789ABCDEF';
+export const hexDigits = '012456789abcdefABCDEF';
+export const alphanumerics = letters + decimalDigits;
+export const identifierStart = alphanumerics + '_';
+export const identifierCharacters = identifierStart + decimalDigits;
