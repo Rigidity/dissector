@@ -57,6 +57,7 @@ export function dumpMatch(
     let result = indent.repeat(depth);
     if (typeof match === 'string') result += match;
     else {
+        while (match.length === 1 && Array.isArray(match[0])) match = match[0];
         result += `${'name' in match ? `${match.name} ` : ''}(${toPositonString(
             source,
             match.start
