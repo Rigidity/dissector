@@ -45,7 +45,7 @@ export function toPositonString(source: string, index: number): string {
 }
 
 export function dumpFailure(source: string, failure: Failure): string {
-    return `${failure.error} at ${toPosition(source, failure.index)}`;
+    return `${failure.error} at ${toPositonString(source, failure.index)}`;
 }
 
 export function dumpMatch(
