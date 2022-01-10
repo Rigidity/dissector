@@ -13,7 +13,7 @@ export class Parser {
         this.base = new State(this);
     }
 
-    public parse(rule: Rule): Result {
+    public match(rule: Rule): Result {
         const result = this.base.match(rule);
         if ('error' in result) return this.failure!;
         return result;

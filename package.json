@@ -1,6 +1,6 @@
 {
     "name": "dissector",
-    "version": "4.0.3",
+    "version": "5.0.0",
     "description": "An easy to use parser combinator library.",
     "main": "dist/index.js",
     "repository": "https://github.com/Rigidity/Dissector.git",
@@ -16,6 +16,6 @@
     ],
     "license": "MIT",
     "devDependencies": {
-        "@types/node": "^16.10.1"
+        "@types/node": "^17.0.8"
     }
 }

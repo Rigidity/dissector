@@ -43,8 +43,8 @@ export class State {
     }
 
     public error(text: string): Failure {
-        const error = { start: this.index, stop: this.index, error: text };
-        if (!this.parser.failure || error.stop > this.parser.failure.stop)
+        const error = { index: this.index, error: text };
+        if (!this.parser.failure || error.index > this.parser.failure.index)
             this.parser.failure = error;
         return error;
     }
