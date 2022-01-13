@@ -195,14 +195,18 @@ export function textOf(...rules: Rule[]): Rule {
 }
 
 export function glueTogether(...rules: Rule[]): Rule {
+    return and(null, raw(...rules));
+}
+
+export function raw(...rules: Rule[]): Rule {
     const rule = and(...rules);
-    return and(null, (state: State): Result => {
+    return (state: State): Result => {
         const branch = state.branch();
         branch.skipped = [];
         const result = branch.match(rule);
         branch.merge();
         return result;
-    });
+    };
 }
 
 export function listOf(
