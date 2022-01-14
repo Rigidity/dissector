@@ -253,7 +253,7 @@ export function oneOf(items: string): Rule {
 }
 
 export function combine(...rules: Rule[]): Rule {
-    return and(null, textOf(glueTogether(...rules)));
+    return textOf(glueTogether(...rules));
 }
 
 export function pickFrom(from: string): Rule {
