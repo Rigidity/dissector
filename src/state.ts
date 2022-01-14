@@ -91,10 +91,7 @@ export class State {
 
     public match(rule: Rule): Result {
         if (this.parser.fatal) return this.parser.fatal;
-        const index = this.index;
-        let rules = this.parser.cache?.get(index);
-        let result = rules?.get(rule);
-        if (result) return result;
+        let result: Result;
         do result = this.run(rule);
         while (
             'error' in result &&
@@ -102,13 +99,6 @@ export class State {
             this.index + 1 < this.parser.source.length &&
             (++this.index, true)
         );
-        if (this.parser.cache) {
-            if (!rules) {
-                rules = new Map();
-                this.parser.cache.set(index, rules);
-            }
-            rules.set(rule, result);
-        }
         if (this.parser.fatal) return this.parser.fatal;
         return result;
     }

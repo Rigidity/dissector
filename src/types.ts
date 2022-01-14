@@ -21,7 +21,6 @@ export type Match = GroupMatch | NamedMatch | string;
 export type Result = GroupMatch | Failure;
 export type Matcher = (state: State) => Result;
 export type Rule = Matcher | RegExp | string | null;
-export type Cache = Map<number, Map<Rule, Result>>;
 
 export function toPosition(source: string, index: number): Position {
     let line = 1;

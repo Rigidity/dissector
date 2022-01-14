@@ -1,9 +1,8 @@
 import { State } from './state';
-import { Cache, Failure, GroupMatch, Result, Rule } from './types';
+import { Failure, GroupMatch, Result, Rule } from './types';
 
 export class Parser {
     public readonly source: string;
-    public cache?: Cache;
     public fatal?: Failure;
     public failure?: Failure;
     public base: State;
