@@ -8,5 +8,5 @@ export const lowercaseHexDigits = '012456789abcdef';
 export const uppercaseHexDigits = '012456789ABCDEF';
 export const hexDigits = '012456789abcdefABCDEF';
 export const wordCharacters = letters + decimalDigits;
-export const identifierStart = wordCharacters + '_';
+export const identifierStart = letters + '_';
 export const identifierCharacters = identifierStart + decimalDigits;
